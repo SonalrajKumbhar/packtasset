@@ -1,8 +1,8 @@
 <footer>
 <div class="footer-container container">
     <div class="content_1">
-        <img src="https://i.postimg.cc/htGyQ4JB/footer-logo.png" alt="logo">
-        <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+         <img src="../../assets/images/Packt.png">
+         <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
         <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards">
     </div>
     <div class="content_2">

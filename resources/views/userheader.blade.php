@@ -1052,10 +1052,6 @@ footer {
  background: var(--black);
 }
 
-.footer-container .content_1 img {
- height: 25px;
- width: 180px;
-}
 
 .footer-container {
  display: flex;
@@ -1408,7 +1404,7 @@ iframe {
              <li><a href="#contact">Contact</a></li>
          </ul>
          <div class="logo">
-         <h4>Packt</h4>
+         <img src="../../assets/images/Packt.png">
          </div>
      </div>
  </nav>

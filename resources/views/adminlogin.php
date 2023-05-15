@@ -40,6 +40,7 @@ input:focus, button:focus {
         <div class="card shadow">
           <div class="card-title text-center border-bottom">
             <h2 class="p-3">Packt Admin Login</h2>
+            <img src="../../assets/images/Packt.png">
           </div>
           <div class="card-body">
             <!-- <form> -->
