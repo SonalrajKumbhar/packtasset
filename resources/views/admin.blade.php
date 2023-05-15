@@ -73,10 +73,10 @@
                     <button class="btn btn-danger btn-sm" type="submit">Delete</button>
                   </form> -->
                   <form id="deleteForm" action="{{ route('book.destroy', $book->id)}}" method="POST" style="display: inline-block">
-    @method('DELETE')
-    @csrf
-    <button class='btn btn-danger btn-sm' type="button" onclick="showConfirmation()">Delete</button>
-</form>
+                    @method('DELETE')
+                    @csrf
+                    <button class='btn btn-danger btn-sm' type="button" onclick="showConfirmation()">Delete</button>
+                </form>
 
                 
             </td>
@@ -116,9 +116,6 @@ function showConfirmation() {
     }
 
 $(document).ready(function() {
-
-  
-
   $('#bookLIstingTable').DataTable({
     columnDefs: [
       {

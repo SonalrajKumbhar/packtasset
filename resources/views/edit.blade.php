@@ -112,7 +112,8 @@
                           </span>
                         </div>
                       </div>
-                      <button type="submit" class="btn btn-block btn-danger">Update Book</button>
+                      <button type="submit" class="btn btn-success">Update Book</button>
+                      <a href="/admin"><button type="submit" class="btn btn-danger">Cancel</button></a>
                       </form>
                   </div>
                 </div>
