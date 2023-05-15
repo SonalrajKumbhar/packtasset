@@ -1,4 +1,13 @@
 @include('admin_header')
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Bootbox.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
 
 
         <!-- partial -->
@@ -63,12 +72,12 @@
                     @method('DELETE')
                     <button class="btn btn-danger btn-sm" type="submit">Delete</button>
                   </form> -->
-                  <form onclick="return window.confirm()" action="{{ route('book.destroy', $book->id)}}" method="POST" style="display: inline-block">
-                    @method('DELETE')
-                    @csrf
-                   <button class='btn btn-danger btn-sm' type="submit">Delete</button>
-                   
-                </form>
+                  <form id="deleteForm" action="{{ route('book.destroy', $book->id)}}" method="POST" style="display: inline-block">
+    @method('DELETE')
+    @csrf
+    <button class='btn btn-danger btn-sm' type="button" onclick="showConfirmation()">Delete</button>
+</form>
+
                 
             </td>
         </tr>
@@ -84,8 +93,32 @@
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
            <script>
+function showConfirmation() {
+        bootbox.confirm({
+            message: "Are you sure you want to delete this book?",
+            buttons: {
+                confirm: {
+                    label: 'Delete',
+                    className: 'btn-danger'
+                },
+                cancel: {
+                    label: 'Cancel',
+                    className: 'btn-secondary'
+                }
+            },
+            callback: function (result) {
+                if (result) {
+                    // Submit the form if the user confirms deletion
+                    document.getElementById('deleteForm').submit();
+                }
+            }
+        });
+    }
 
 $(document).ready(function() {
+
+  
+
   $('#bookLIstingTable').DataTable({
     columnDefs: [
       {
