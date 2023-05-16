@@ -1,8 +1,5 @@
 @include('userheader')
-
-
-
-            <h2 class="mt-2 ml-5">Book List</h2>
+   <h2 class="mt-2 ml-5">Book List</h2>
    <div class="m-5">
             <table class="table" id="booklist">
     <thead>
