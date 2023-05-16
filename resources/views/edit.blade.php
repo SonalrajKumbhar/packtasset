@@ -73,7 +73,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Publication Date</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" name="publication_date" value="{{$BooksDetails->publication_date}}">
+                              <input type="text" class="form-control" name="publication_date" value="{{$BooksDetails->publication_date}}" placeholder="YYYY/M/D">
                             </div>
                           </div>
                         </div>
